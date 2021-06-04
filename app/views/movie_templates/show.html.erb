@@ -7,6 +7,10 @@
 </a>
 
 <hr>
+<br>
+ <%= @the_movie.director.name %>
+<br>
+<hr>
 
 <dl>
   <dt>
@@ -48,11 +52,11 @@
     Director
   </dt>
   <dd>
-    <% matching_directors = Director.where({ :id => @the_movie.director_id }) %>
+    <%# matching_directors = Director.where({ :id => @the_movie.director_id }) %>
     
-    <% the_director = matching_directors.at(0) %>
+    <%# the_director = matching_directors.at(0) %>
 
-    <%= the_director.name %>
+    <%= @the_movie.director.name %>
   </dd>
 
   <dt>
